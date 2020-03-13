@@ -1,0 +1,43 @@
+extends ../layouts/dashboard.pug
+block config
+  - var bodyClass = 'sb-nav-fixed'
+  - var pageTitle = 'Release 3'
+  - var sidenavStyle = 'sb-sidenav-dark'
+
+append css
+  link(href='https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css', rel='stylesheet', crossorigin='anonymous')
+
+block content
+  .container-fluid
+    include includes/page-header.pug
+    .card.mb-4
+      .card-header
+       dl.row
+        dt.col-sm-3.text-right ID:
+        dd.col-sm-3 1
+        dt.col-sm-3.text-right Name/Label:
+        dd.col-sm-3 Release 3 Sprint 5
+        dt.col-sm-3.text-right Environment:
+        dd.col-sm-3 Circus Circus
+        dt.col-sm-3.text-right Date:
+        dd.col-sm-3 Jan 03, 2020
+  .card-body
+        .nav.nav-tabs
+          .nav-item.nav-link(aria-controls="component_tab" aria-selected="true" role="tab" data-toggle="tab" href="#component_tab") Components
+          .nav-item.nav-link(aria-controls="deployable_tab" aria-selected="false" role="tab" data-toggle="tab" href="#deployable_tab") Deployables
+        .tab-content
+          .tab-pane.fade.show.active(id="component_tab")
+            include includes/release-3-components-demodata
+          .tab-pane.fade(id="deployable_tab")
+            include includes/release-3-deployables-demodata.pug
+
+  //.card.mb-4
+    //    .card-body.
+    //        DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the  <a target='_blank' href='https://datatables.net/'>official DataTables documentation</a>.
+    //.card.mb-4
+    //  .card-header
+    //    i.fas.fa-table.mr-1
+    //    | RTS Tracked Releases
+    //  .card-body
+    //    include includes/release-list-demodata.pug
+

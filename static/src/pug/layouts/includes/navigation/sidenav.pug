@@ -13,6 +13,19 @@ nav(class=['sb-sidenav', 'accordion'] class=sidenavStyle)#sidenavAccordion
         | Dashboard
 
       .sb-sidenav-menu-heading
+        | Release
+
+      a.nav-link(href='release-list-all.html')
+        .sb-nav-link-icon
+          i.fab.fa-android
+        | List All
+
+      a.nav-link(href='release-detail.html')
+        .sb-nav-link-icon
+          i.fas.fa-crown
+        | Release Detail
+
+      .sb-sidenav-menu-heading
         | Interface
 
       a.nav-link.collapsed(href='#', data-toggle='collapse' data-target='#collapseLayouts' aria-expanded='false' aria-controls='collapseLayouts')
@@ -68,5 +81,5 @@ nav(class=['sb-sidenav', 'accordion'] class=sidenavStyle)#sidenavAccordion
 
   .sb-sidenav-footer
 
-    .small Logged in as:
-    | Start Bootstrap
+    .small Release Tracking System
+    | v0.0.0
